@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+a = <input type="text" id="scr"/> <br>
+b = <input type="text" id="scr2"/>
+<button type="button" onclick="Tinhtong()">Tính tổng a đến b</button>
+<p id="kq">tổng là = </p>
+
+<script>
+    function Tinhtong() {
+        let a = +document.getElementById("scr").value;
+        let b = +document.getElementById("scr2").value;
+        let c = (a+b)/2*(b-a+1)
+        document.getElementById("kq").innerHTML = c;
+    }
+</script>
+</body>
+</html>

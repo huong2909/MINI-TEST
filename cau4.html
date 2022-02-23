@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Tính chu vi và diện tích hình vuông</p>
+<input type="text" id="scr"/>
+<button type="button" onclick="chuvi()">chuvi</button>
+<button type="button" onclick="dientich()">dientich</button> <br>
+<p id="kq">c=</p>
+<p id="kq1">S=</p>
+
+<script>
+    function chuvi() {
+        let a = +document.getElementById("scr").value;
+        let b =4*a
+        document.getElementById('kq').innerHTML = b;
+    }
+    function dientich() {
+        let a = +document.getElementById("scr").value;
+        let b =a*a
+        document.getElementById('kq1').innerHTML = b;
+    }
+</script>
+
+</body>
+</html>

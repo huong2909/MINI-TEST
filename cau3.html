@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+a = <input type="text" id="scr"/> <br>
+b = <input type="text" id="scr2"/>
+    <button type="button" onclick="Tinhtich()">Tính tích</button> <br>
+      <h1 id="kq">S=</h1>
+
+    <script>
+        function Tinhtich() {
+            let a = +document.getElementById("scr").value;
+            let b = +document.getElementById("scr2").value;
+            let c =a*b
+            document.getElementById('kq').innerHTML = c;
+        }
+    </script>
+
+</body>
+</html>

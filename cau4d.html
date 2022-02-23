@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+a = <input type="text" id="scr"/> <br>
+b = <input type="text" id="scr2"/> <br>
+c = <input type="text" id="scr3"/>
+<button type="button" onclick="Tamgiac()">là tam giác</button>
+<p id="kq">kết quả là </p>
+
+
+<script>
+    function Tamgiac() {
+        let a = +document.getElementById("scr").value;
+        let b = +document.getElementById("scr2").value;
+        let c = +document.getElementById("scr3").value;
+        if (((a+b)>c) && ((a+c)>b) && ((b+c)>a)) {
+            document.getElementById("kq").innerHTML = "là tam giác thường";
+            if (((a == b) || (b == c) || (a == c)) && ((a==b!=c) || (a==c!=b) || (a!=b==c))) {
+                document.getElementById("kq").innerHTML = "là tam giác cân";
+            }
+            if (((a * a) == (b * b) + (c * c)) || ((c * c) == (b * b) + (a * a)) || ((b * b) == (a * a) + (c * c)))
+                document.getElementById("kq").innerHTML = "là tam giác vuông";
+            if ((a == b == c)) {
+                document.getElementById("kq").innerHTML = "là tam giác đều";
+            }
+        }
+        else
+            {
+            document.getElementById("kq").innerHTML = "không phải là tam giác" ;
+        }
+    }
+</script>
+
+</body>
+</html>

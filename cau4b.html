@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+a = <input type="text" id="scr"/> <br>
+b = <input type="text" id="scr2"/>
+<button type="button" onclick="Tinhaa()">Tính a^2</button>
+<button type="button" onclick="Tinhab()">Tính a^b</button> <br>
+<p id="kq">a^2 = </p>
+<p id="kq2">a^b = </p>
+
+<script>
+    function Tinhaa() {
+        let a = +document.getElementById("scr").value;
+        let b = +document.getElementById("scr2").value;
+        let c = a*a
+        document.getElementById("kq").innerHTML = c;
+    }
+    function Tinhab() {
+        let a = +document.getElementById("scr").value;
+        let b = +document.getElementById("scr2").value;
+        let c = a**b
+        document.getElementById("kq2").innerHTML = c;
+    }
+</script>
+
+</body>
+</html>
