@@ -17,15 +17,18 @@ c = <input type="text" id="scr3"/>
         let a = +document.getElementById("scr").value;
         let b = +document.getElementById("scr2").value;
         let c = +document.getElementById("scr3").value;
-        if (((a+b)>c) && ((a+c)>b) && ((b+c)>a)) {
+        if ((a+b)>c && (a+c)>b && (b+c)>a) {
             document.getElementById("kq").innerHTML = "là tam giác thường";
-            if (((a == b) || (b == c) || (a == c)) && ((a==b!=c) || (a==c!=b) || (a!=b==c))) {
-                document.getElementById("kq").innerHTML = "là tam giác cân";
-            }
-            if (((a * a) == (b * b) + (c * c)) || ((c * c) == (b * b) + (a * a)) || ((b * b) == (a * a) + (c * c)))
-                document.getElementById("kq").innerHTML = "là tam giác vuông";
-            if ((a == b == c)) {
+            if (a == b && b == c) {
                 document.getElementById("kq").innerHTML = "là tam giác đều";
+            }
+               else {
+                if ((a == b) || (b == c) || (a == c)) {
+                    document.getElementById("kq").innerHTML = "là tam giác cân";
+                }
+            }
+            if (((a * a) == (b * b) + (c * c)) || ((c * c) == (b * b) + (a * a)) || ((b * b) == (a * a) + (c * c))){
+                document.getElementById("kq").innerHTML = "là tam giác vuông";
             }
         }
         else
